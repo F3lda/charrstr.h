@@ -66,7 +66,7 @@ cas_free(str)               cas_length(str)            cas_clear(str)
 cas_cat_ex(str, text, bs)   cas_copy_ex(str, text, bs) cas_resize(str, size)
 ```
 
-##️ Building
+## Building
 
 ```bash
 make          # Build release
