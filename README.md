@@ -2,7 +2,7 @@
 
 A lightweight C string library that provides **O(1) concatenation** by tracking string length, eliminating expensive `strlen()` calls.
 
-## 🚀 Performance
+## Performance
 
 ChArrStr dramatically outperforms standard `strcat()` in specific use cases:
 
@@ -13,7 +13,7 @@ ChArrStr dramatically outperforms standard `strcat()` in specific use cases:
 | 100,000    | 0.000956s | 0.421847s | **441.2x**  |
 | 1,000,000  | 0.009634s | 42.157891s | **4376.8x** |
 
-## 🔧 Quick Start
+## Quick Start
 
 ```c
 #include "charrstr.h"
@@ -38,7 +38,7 @@ chArrStrCatEx(&str, "This will auto-resize in blocks", 64);
 chArrStrFree(&str);
 ```
 
-## 📚 API
+## API
 
 ### Core Functions
 ```c
@@ -66,7 +66,7 @@ cas_free(str)               cas_length(str)            cas_clear(str)
 cas_cat_ex(str, text, bs)   cas_copy_ex(str, text, bs) cas_resize(str, size)
 ```
 
-## 🏗️ Building
+##️ Building
 
 ```bash
 make          # Build release
@@ -75,7 +75,7 @@ make debug    # Build with debug info
 make clean    # Clean build files
 ```
 
-## 💡 Why It's Fast
+## Why It's Fast
 
 **Standard `strcat()` Problem:**
 ```c
@@ -95,14 +95,14 @@ chArrStrCat(str, " text2");   // O(1) - knows position
 // Total: O(n) complexity
 ```
 
-## 🎯 Use Cases
+## Use Cases
 
 - **Log building**: Assembling log messages from components
 - **JSON/XML generation**: Building structured data incrementally
 - **Template rendering**: Combining template fragments
 - **Protocol serialization**: Creating network messages
 
-## ⚠️ Limitations
+## Limitations
 
 - 8 bytes overhead per string
 - Requires C99 (flexible array members)
